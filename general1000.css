@@ -1,0 +1,17 @@
+html{
+    font-size: 14px;
+}
+
+#grid-pagina{
+    display: grid ;
+    grid-template-areas: "z-welcome z-welcome"
+                         "z-meniu z-meniu"
+                         "z-recenzii z-recenzii"
+                         "z-fig1 z-program "
+                         "z-fig2 z-program "
+                         "z-fig3 z-program"
+                         "z-angajari z-angajari"
+                         "z-preparate z-preparate ";
+    gap: 20px;
+    row-gap: 10px;
+}

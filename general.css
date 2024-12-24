@@ -1,0 +1,188 @@
+html {
+    font-size: 17px;
+    transition: all 500ms linear;
+}
+
+body {
+    --culoare-verde: #228B22;
+    --culoare-rosu: #B22222;
+    --culoare-alb-transparent: rgba(255, 255, 255, 0.9);
+    --cl-marcare: rgb(255, 250, 243);
+    --cl-light-t: rgba(255, 255, 255, 0.7);
+    --cl-text: #2F4F4F;
+    --imag-body-backgr: url("../imagini/wall.jpg");
+    --latime-spatiere: 100px;
+    background-image: linear-gradient(transparent, transparent 15%, var(--culoare-alb-transparent) 100%, var(--culoare-alb-transparent) 60%, transparent 85%, transparent), var(--imag-body-backgr);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: var(--culoare-verde);
+    padding-left: var(--latime-spatiere);
+    padding-right: var(--latime-spatiere);
+}
+
+main {
+    background-color: var(--cl-light-t);
+    --latime-spatiere: 30px;
+    padding-left: var(--latime-spatiere);
+    padding-right: var(--latime-spatiere);
+}
+
+#grid-pagina > * {
+    outline: 1px solid black;
+    padding: 10px;
+}
+
+#grid-pagina > figure {
+    margin: 0;
+}
+
+#grid-pagina {
+    display: grid;
+    grid-template-areas: "z-welcome z-welcome z-welcome"
+                         "z-produse z-produse z-promotii"
+                         "z-fig1 z-anunturi z-anunturi"
+                         "z-fig2 z-anunturi z-anunturi"
+                         "z-fig3 z-orar z-orar"
+                         "z-index-intrebari z-index-intrebari z-index-intrebari";
+    gap: 20px;
+    row-gap: 10px;
+}
+
+#welcome {
+    grid-area: z-welcome;
+}
+
+#promotii {
+    grid-area: z-promotii;
+}
+
+#produse {
+    grid-area: z-produse;
+}
+
+#orar {
+    grid-area: z-orar;
+}
+
+#fig1 {
+    grid-area: z-fig1;
+}
+
+#fig2 {
+    grid-area: z-fig2;
+}
+
+#fig3 {
+    grid-area: z-fig3;
+}
+
+#anunturi {
+    grid-area: z-anunturi;
+}
+
+#index-intrebari {
+    grid-area: z-index-intrebari;
+}
+
+.fg-img img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(235, 228, 228);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--culoare-negru);
+}
+
+.farfurie {
+    width: 80%;
+    max-width: 400px;
+}
+
+#pachete {
+    list-style-image: url("../imagini/pizza.jpg");
+}
+
+#pachete li:nth-child(odd) {
+    background-color: var(--culoare-verde);
+    color: white;
+}
+
+#pachete li:nth-child(even) {
+    background-color: var(--culoare-rosu);
+    color: white;
+}
+
+#pachete li {
+    border: 3px solid transparent;
+    transition: all 500ms linear;
+    height: 30px;
+    line-height: 30px;
+}
+
+#pachete li:hover {
+    border: 3px solid var(--culoare-verde);
+}
+
+#schimba_lista:checked + #pachete {
+    list-style-image: none;
+}
+
+#schimba_lista + #pachete::before {
+    content: "Lista neordonata";
+    color: var(--culoare-text);
+}
+
+#schimba_lista:checked + #pachete::before {
+    content: "Lista ordonata";
+    color: var(--culoare-text);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundal întunecat pentru contrast */
+    color: white; /* Text alb */
+    padding: 20px;
+    text-align: center;
+}
+
+footer address {
+    font-style: normal; /* Elimină înclinația dacă este necesar */
+    color: white; /* Asigură-te că textul este vizibil */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundal întunecat pentru contrast */
+    text-align: center; /* Centrare pe pagină */
+    padding: 20px; /* Spațiere interioară */
+}
+
+header h1 {
+    font-size: 3rem; /* Dimensiunea textului */
+    color: white; /* Text alb */
+    font-family: 'Georgia', serif; /* Font elegant */
+    text-shadow: 2px 2px 4px black; /* Umbră pentru text */
+    margin: 0; /* Eliminare spații inutile */
+}
+
+header h1 span {
+    color: white; /* Culoare aurie pentru accent */
+    font-weight: bold; /* Text îngroșat */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centrează meniul pe orizontală */
+    align-items: center; /* Centrează meniul pe verticală */
+    height: 60px; /* Înălțime fixă pentru aliniere verticală (ajustează dacă este necesar) */
+}
+
+ul.meniu {
+    display: flex;
+    justify-content: center; /* Centrează elementele în interiorul listei */
+    margin: 0;
+    padding: 0;
+}
